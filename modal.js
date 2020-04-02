@@ -4,8 +4,6 @@ var closeButton = document.querySelector("#close-button");
 
 var fusionHeader = document.querySelector(".fusion-header-wrapper");
 
-var lastFocus;
-
 closeButton.addEventListener('click', () => {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
@@ -33,10 +31,6 @@ function displayPopup() {
   body.style.top = `-${scrollY}`;
 
 }
-
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-});
 
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
