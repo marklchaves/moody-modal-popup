@@ -1,8 +1,8 @@
-var modal = document.querySelector("#covid-19-modal");
-var modalOverlay = document.querySelector("#covid-19-modal-overlay");
-var closeButton = document.querySelector("#close-button");
+let modal = document.querySelector("#moodymodal-modal");
+let modalOverlay = document.querySelector("#moodymodal-modal-overlay");
+let closeButton = document.querySelector("#close-button");
 
-var fusionHeader = document.querySelector(".fusion-header-wrapper");
+let fusionHeader = document.querySelector(".fusion-header-wrapper");
 
 closeButton.addEventListener('click', () => {
   modal.classList.toggle("closed");
@@ -30,13 +30,18 @@ function displayPopup() {
   body.style.position = 'fixed';
   body.style.top = `-${scrollY}`;
 
+  sessionStorage.setItem('modalDisplayed', true);
+
 }
 
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 });
 
+let modalDisplayed = sessionStorage.getItem('modalDisplayed');
+
 setTimeout(function(){
-    lastFocus = document.activeElement;
+  if (!modalDisplayed) {
     displayPopup();
+  }
 }, 2000);

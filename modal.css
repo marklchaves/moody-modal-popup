@@ -1,4 +1,4 @@
-.covid-19-modal {
+.moodymodal-modal {
   /* This way it could be display flex or grid or whatever also. */
   display: block;
 
@@ -21,8 +21,10 @@
   /* Use this for centering if unknown width/height */
   transform: translate(-50%, -50%);
 
-  /* If known, negative margins are probably better (less chance of blurry text). */
-  /* margin: -200px 0 0 -200px; */
+  /** 
+   * If known, negative margins are probably better 
+   * (less chance of blurry text). 
+   margin: -200px 0 0 -200px; */
 
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
@@ -30,7 +32,7 @@
   display: none;
 }
 
-.covid-19-modal-overlay {
+.moodymodal-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +42,7 @@
 
   background: rgba(0, 0, 0, 0.6);
 }
-.covid-19-modal-guts {
+.moodymodal-modal-guts {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +75,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-.covid-19-modal .close-button {
+.moodymodal-modal .close-button {
   position: absolute;
 
   /* don't need to go crazy with z-index here, just sits over .modal-guts */
@@ -90,7 +92,7 @@ h2 {
   border-radius: 10px;
 }
 
-.covid-19-modal .close-button:hover {
+.moodymodal-modal .close-button:hover {
   cursor: pointer;
 }
 
