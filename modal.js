@@ -2,6 +2,7 @@ let modal = document.querySelector("#moodymodal-modal");
 let modalOverlay = document.querySelector("#moodymodal-modal-overlay");
 let closeButton = document.querySelector("#close-button");
 
+// Avada specific.
 let fusionHeader = document.querySelector(".fusion-header-wrapper");
 
 closeButton.addEventListener('click', () => {
@@ -30,6 +31,7 @@ function displayPopup() {
   body.style.position = 'fixed';
   body.style.top = `-${scrollY}`;
 
+  // Remember that we showed the modal in this session.
   sessionStorage.setItem('modalDisplayed', true);
 
 }
